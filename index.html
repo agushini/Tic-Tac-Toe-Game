@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts.js"></script>   
+    </head>
+    <header>
+        <h1 class="title">Tic Tac Toe</h1>
+    </header>
+    <body onload="onloadFunction()">
+        <main>
+            <h3 id="timer"></h3>
+            <!-- 
+                11 12 13
+                21 22 23
+                31 32 33   
+                this is how the number corespond to the boxes
+            -->
+            <ul class="flex-container flex start" id=box>
+                <li id='11'class="flex-item" onclick="masterClick(11)" > </li>
+                <li id='12'class="flex-item" onclick="masterClick(12)"> </li>
+                <li id='13'class="flex-item" onclick="masterClick(13)" > </li>
+            </ul>
+
+            <ul class="flex-container flex end" id=box2>
+                <li id='21'class="flex-item" onclick="masterClick(21)" > </li>
+                <li id='22'class="flex-item" onclick="masterClick(22)"> </li>
+                <li id='23'class="flex-item" onclick="masterClick(23)"> </li>
+            </ul>
+
+            <ul class="flex-container flex center" id=box3>
+                <li id='31'class="flex-item" onclick="masterClick(31)"> </li>
+                <li id='32'class="flex-item" onclick="masterClick(32)"> </li>
+                <li id='33'class="flex-item" onclick="masterClick(33)"> </li>
+            </ul>
+
+            
+            <h3 id='whichTurn'></h3>
+            <h3 id="winner"></h3>
+            
+            
+            <button class="startButton" id="startButton" onclick=startGame()> Start Game!</button>
+            <button class="restartButton" id="restartButton" onclick= restartGame()> Restart Game!</button>
+            <form> 
+                <input type="radio" id="pvpButton" value="pvp" name="gameType" checked>
+                <label> Player vs Player </label>
+                <br>
+                <input type="radio" id="pvcButton" value = "pvc" name="gameType">
+                <label> Player vs Computer </label>
+            </form>
+            <h3 id="gameNum"></h3>
+
+        </main>
+    </body>
+    <footer> 
+        Amaya Gushiniere CIS 435 Fall 2021
+    </footer>
+    
+</html>
